@@ -131,25 +131,29 @@ table, th, td {
   display: inline-block;
   height: 40px;
   margin: 10px auto;
-  scale: 2;
+  /* scale: 2; */
   transition: 0.3s;
   position: relative;
   z-index: 10000 !important;
-}
+} 
 
 /* Currency dropdown menu */
 .currency-dropdown {
   position: absolute;
-  top: 100%;
+  top: 100;
   left: 0;
   background-color: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  padding: 8px 0;
+  padding: 3px 0px;
   list-style: none;
-  margin: 8px 0 0 0;
-  width: 100%;
-  min-width: 250px;
+  margin: 5px 25px 0px;
+  width:300px;
+  /* min-width: 300px;
+  max-width: 350px; */
+  font-size: 13px;
+  transform: scale(0.5);
+  transform-origin :top;
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
   z-index: 9999 !important;
 }
