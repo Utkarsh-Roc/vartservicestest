@@ -1,0 +1,150 @@
+[
+    {
+        "id": 1,
+        "title": "V-Artservices Pvt Ltd"
+    },
+
+    {
+        "id": 2,
+        "title": "Services",
+        "quicklink": [
+            {
+                "id": 1,
+                "text": "E-Commerce",
+                "url": "/services/ecommerce"
+            },
+            {
+                "id": 2,
+                "text": "Erp & Crm",
+                "url": "/services/erpandcrm"
+            },
+            {
+                "id": 3,
+                "text": "Website Development",
+                "url": "/services/websitedevelopment"
+            },
+            {
+                "id": 4,
+                "text": "Social Media",
+                "url": "/services/socialmedia"
+            },
+            {
+                "id": 5,
+                "text": "Digital Marketing",
+                "url": "/services/digitalmarketing"
+            },
+            {
+                "id": 6,
+                "text": "App Development",
+                "url": "/services/appdevelopment"
+            },
+            {
+                "id": 7,
+                "text": "UI UX Designing",
+                "url": "/services/uiuxdesigning"
+            },
+            {
+                "id": 8,
+                "text": "SEO & Content Writing",
+                "url": "/services/seoandcontentwriting"
+            }
+        ]
+    },
+
+    {
+        "id": 3,
+        "title": "Company",
+        "quicklink": [
+            {
+                "id": 1,
+                "text": "2D & 3D Animation",
+                "url": "/animation/animation2dand3d"
+            },
+            {
+                "id": 2,
+                "text": "AR & VR",
+                "url": "/animation/arandvr"
+            },
+            {
+                "id": 3,
+                "text": "Motion Graphics",
+                "url": "/animation/motiongraphics"
+            },
+            {
+                "id": 4,
+                "text": "DI",
+                "url": "/animation/di"
+            },
+            {
+                "id": 5,
+                "text": "Editing",
+                "url": "/animation/editing"
+            },
+            {
+                "id": 6,
+                "text": "CGI",
+                "url": "/animation/cgi"
+            }
+        ]
+    },
+
+    {
+        "id": 4,
+        "title": "Animations",
+        "quicklink": [
+            {
+                "id": 1,
+                "text": "Portfolio",
+                "url": "/portfolios"
+            },
+            {
+                "id": 2,
+                "text": "Blog",
+                "url": "/blog"
+            },
+            {
+                "id": 3,
+                "text": "About Us",
+                "url": "/about-us"
+            },
+            {
+                "id": 4,
+                "text": "Contact Us",
+                "url": "/contact"
+            }
+        ]
+    },
+
+    {
+        "id": 5,
+        "title": "Resources",
+        "quicklink": [
+            {
+                "id": 1,
+                "text": "About",
+                "url": "/about"
+            },
+            {
+                "id": 2,
+                "text": "Portfolio",
+                "url": "/portfolio"
+            },
+            {
+                "id": 3,
+                "text": "Contaact",
+                "url": "/contact"
+            },
+            {
+                "id": 4,
+                "text": "Service",
+                "url": "/service"
+            }
+        ]
+    },
+
+    {
+        "id": 6,
+        "title": "Connect With Us",
+        "subtitle": "The V-Art Services PVT. LTD. Services is one of the most trusted offshore Web & Software Development Company."
+    }
+]
