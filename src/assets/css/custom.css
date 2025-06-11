@@ -105,6 +105,11 @@
   opacity: .6;
 }
 
+.header-payment-button {
+  min-width: 170px !important; /* Override the default 250px */
+  border-radius: 2px
+}
+
 table, th, td {
   border: 1px solid rgb(112, 112, 112);
 }
@@ -124,6 +129,8 @@ table, th, td {
   transition: transform 0.2s ease;
   z-index: 1;
 }
+
+
 
 /* Ensure button container has higher z-index */
 .ButtonContainer {
