@@ -236,11 +236,17 @@ table, th, td {
 
 .header-pay-btn {
   display: flex !important;
+  background: #072654;
+  border-color: #072654;
+  color: #fff;
   align-items: center;
   justify-content: space-between;
   position: relative;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+.header-pay-btn svg path{
+  fill: #fff;
 }
 
 .header-pay-btn:hover {

@@ -90,31 +90,62 @@ const HeaderOne = ({btnStyle, HeaderSTyle}) => {
                                 </nav>
                                 <div className="header-btn">
                                     <div className="header-payment-dropdown" style={{ position: "relative", display: "inline-block" }} ref={dropdownRef}>
-                                        <button
-                                            onClick={handleDropdownToggle}
-                                            className={`btn-default header-pay-btn ${btnStyle}`}
-                                            style={{padding: "0px 30px 0px 15px", position: "relative"}}
-                                        >
-                                            Pay Now
-                                            <svg 
-                                                className="header-dropdown-chevron"
-                                                width="12" 
-                                                height="12" 
-                                                viewBox="0 0 24 24" 
-                                                fill="none" 
-                                                stroke="currentColor" 
-                                                strokeWidth="2"
-                                                style={{ 
-                                                    position: "absolute",
-                                                    right: "8px",
-                                                    top: "50%",
-                                                    transform: showCurrencyDropdown ? "translateY(-50%) rotate(180deg)" : "translateY(-50%) rotate(0deg)",
-                                                    transition: "transform 0.2s ease"
-                                                }}
-                                            >
-                                                <path d="M6 9l6 6 6-6"/>
-                                            </svg>
-                                        </button>
+<button
+    onClick={handleDropdownToggle}
+    className={`btn-default header-pay-btn ${btnStyle}`}
+    style={{
+        padding: "0px 30px 0px 15px",
+        position: "relative",
+        display: "flex",
+        alignItems: "center",
+        gap: "10px"
+    }}
+>
+    {/* Razorpay SVG Icon */}
+    <svg
+        width="18"
+        height="20"
+        viewBox="0 0 18 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+            d="M7.077 6.476l-.988 3.569 5.65-3.589-3.695 13.54 3.752.004 5.457-20L7.077 6.476z"
+            fill="#fff"
+        ></path>
+        <path
+            d="M1.455 14.308L0 20h7.202L10.149 8.42l-8.694 5.887z"
+            fill="#fff"
+        ></path>
+    </svg>
+
+    {/* Button Text Content */}
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", lineHeight: 1 }}>
+        <span style={{ fontWeight: 600 }}>Pay Now</span>
+        <div style={{ fontSize: "10px", color: "#ccc" }}>Secured by Razorpay</div>
+    </div>
+
+    {/* Chevron */}
+    <svg
+        width="12"
+        height="12"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        style={{
+            position: "absolute",
+            right: "8px",
+            top: "50%",
+            transform: showCurrencyDropdown
+                ? "translateY(-50%) rotate(180deg)"
+                : "translateY(-50%) rotate(0deg)",
+            transition: "transform 0.2s ease"
+        }}
+    >
+        <path d="M6 9l6 6 6-6" />
+    </svg>
+</button>
 
                                         {showCurrencyDropdown && (
                                             <ul className="header-currency-dropdown">
