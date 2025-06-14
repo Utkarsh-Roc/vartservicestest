@@ -7,6 +7,7 @@
   padding: 5px;
   border: 0;
 }
+
 .image-wrap img {
   width: 100%;
   height: 100%;
@@ -14,17 +15,18 @@
   object-position: top center;
   transition: all 2s ease-in-out;
 }
+
 .image-wrap:hover img {
   object-position: bottom center;
 }
 
- /* Move reCAPTCHA v3 badge in front */
- .grecaptcha-badge {
-  z-index:999;
+/* Move reCAPTCHA v3 badge in front */
+.grecaptcha-badge {
+  z-index: 999;
   bottom: 0px;
-  }
+}
 
-  .razorpaybody {
+.razorpaybody {
   margin: 0;
   background-color: #f0f4f8;
   display: flex;
@@ -39,6 +41,8 @@
   margin: 10px auto;
   scale: 2;
   transition: 0.3s;
+  position: relative;
+  z-index: 1000 !important;
 }
 
 .ButtonContainer:hover {
@@ -107,12 +111,13 @@
 
 .header-payment-button {
   min-width: 170px !important; /* Override the default 250px */
-  border-radius: 2px
+  border-radius: 2px;
 }
 
 table, th, td {
   border: 1px solid rgb(112, 112, 112);
 }
+
 /* Currency dropdown button modifications */
 .currency-dropdown-button {
   display: flex !important;
@@ -130,20 +135,6 @@ table, th, td {
   z-index: 1;
 }
 
-
-
-/* Ensure button container has higher z-index */
-.ButtonContainer {
-  box-shadow: 0 0 20px rgba(0,0,0,.08);
-  display: inline-block;
-  height: 40px;
-  margin: 10px auto;
-  /* scale: 2; */
-  transition: 0.3s;
-  position: relative;
-  z-index: 10000 !important;
-} 
-
 /* Currency dropdown menu */
 .currency-dropdown {
   position: absolute;
@@ -155,12 +146,10 @@ table, th, td {
   padding: 3px 0px;
   list-style: none;
   margin: 5px 25px 0px;
-  width:300px;
-  /* min-width: 300px;
-  max-width: 350px; */
+  width: 300px;
   font-size: 13px;
   transform: scale(0.5);
-  transform-origin :top;
+  transform-origin: top;
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
   z-index: 9999 !important;
 }
@@ -213,32 +202,12 @@ table, th, td {
   line-height: 1.2;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .ButtonContainer {
-    scale: 1.5;
-  }
-  
-  .currency-dropdown {
-    min-width: 200px;
-  }
-}
-
-@media (max-width: 480px) {
-  .ButtonContainer {
-    scale: 1.2;
-  }
-  
-  .currency-dropdown {
-    min-width: 180px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}/* Header Currency Dropdown Styles */
+/* Header Payment Dropdown Styles */
 .header-payment-dropdown {
   position: relative;
-  display: inline-block;
-  z-index: 10000 !important;
+  display: inline-flex !important;
+  align-items: center;
+  z-index: 99999 !important; /* Increased z-index */
 }
 
 .header-pay-btn {
@@ -252,7 +221,8 @@ table, th, td {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.header-pay-btn svg path{
+
+.header-pay-btn svg path {
   fill: #fff;
 }
 
@@ -274,34 +244,13 @@ table, th, td {
   border-radius: 10px;
   padding: 2px 0px;
   list-style: none;
-  margin:2px;
+  margin: 2px;
   min-width: 220px;
   font-size: 13px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-  z-index: 9999 !important;
+  z-index: 999999 !important; /* Much higher z-index */
   animation: headerDropdownFadeIn 0.2s ease;
 }
-
-.currency-dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 6.5px;
-  padding: 3px 0px;
-  list-style: none;
-  margin: 5px 25px 0px;
-  width:300px;
-  /* min-width: 300px;
-  max-width: 350px; */
-  font-size: 13px;
-  transform: scale(0.5);
-  transform-origin :top;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-  z-index: 9999 !important;
-}
-
 
 @keyframes headerDropdownFadeIn {
   from {
@@ -384,18 +333,210 @@ table, th, td {
   color: #059dff;
 }
 
-/* Responsive adjustments for header */
+/* Header Right Container - MAIN FIX FOR MOBILE ALIGNMENT */
+.header-right {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 8px !important;
+  flex-wrap: nowrap !important;
+}
+
+/* Header Button Container */
+.header-btn {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+/* Mobile menu bar alignment */
+.mobile-menu-bar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 40px !important;
+  height: 40px !important;
+  margin-left: 0 !important; /* Override any existing margin */
+}
+
+.mobile-menu-bar.ml--5 {
+  margin-left: 0 !important; /* Override the ml--5 class specifically */
+}
+
+.hamberger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamberger-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+/* Dark mode button alignment */
+.rn-dark-mode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+}
+
+/* Container overflow fix */
+.container {
+  overflow-x: visible;
+}
+
+.header-default {
+  overflow: visible !important;
+}
+
+.rn-header {
+  overflow: visible !important;
+}
+
+.row--0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row--0 > [class*="col-"] {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* Mobile Responsive Styles */
 @media (max-width: 768px) {
+  .ButtonContainer {
+    scale: 1.5;
+  }
+  
+  .currency-dropdown {
+    min-width: 200px;
+  }
+  
   .header-currency-dropdown {
     min-width: 200px;
     right: -10px;
   }
+  
+  .header-right {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 6px !important;
+    flex-wrap: nowrap !important;
+  }
+  
+  .header-payment-button {
+    min-width: 140px !important; /* Reduced from 170px */
+    height: 36px; /* Slightly smaller height */
+    font-size: 12px;
+  }
+  
+  .PaymentButton-contents {
+    padding: 2px 8px 2px 36px; /* Adjusted padding */
+  }
+  
+  .PaymentButton-text {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  
+  .PoweredBy {
+    font-size: 7px;
+    line-height: 8px;
+  }
+  
+  .mysvg {
+    width: 14px;
+    height: 16px;
+    margin: 7px 8px;
+  }
+  
+  .mobile-menu-bar,
+  .rn-dark-mode {
+    min-width: 36px;
+    height: 36px;
+  }
+  
+  .hamberger-button {
+    width: 36px;
+    height: 36px;
+  }
 }
 
 @media (max-width: 480px) {
+  .ButtonContainer {
+    scale: 1.2;
+  }
+  
+  .currency-dropdown {
+    min-width: 180px;
+    left: 50%;
+    transform: translateX(-50%) scale(0.5);
+  }
+  
   .header-currency-dropdown {
     min-width: 180px;
     right: -20px;
+  }
+  
+  .header-right {
+    gap: 4px; /* Minimal gap on very small screens */
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .header-payment-button {
+    min-width: 120px !important;
+    height: 32px;
+    font-size: 11px;
+  }
+  
+  .PaymentButton-contents {
+    padding: 1px 6px 1px 32px;
+  }
+  
+  .PaymentButton-text {
+    font-size: 11px;
+    line-height: 12px;
+  }
+  
+  .PoweredBy {
+    font-size: 6px;
+    line-height: 7px;
+  }
+  
+  .mysvg {
+    width: 12px;
+    height: 14px;
+    margin: 6px 6px;
+  }
+  
+  .dropdown-chevron {
+    width: 10px;
+    height: 10px;
+    right: 6px;
+  }
+  
+  .mobile-menu-bar,
+  .rn-dark-mode {
+    min-width: 32px;
+    height: 32px;
+  }
+  
+  .hamberger-button {
+    width: 32px;
+    height: 32px;
   }
   
   .header-pay-btn {

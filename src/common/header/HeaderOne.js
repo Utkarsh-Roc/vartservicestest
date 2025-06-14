@@ -117,7 +117,6 @@ const HeaderOne = ({ btnStyle, HeaderSTyle }) => {
                                             </svg>
                                         </button>
 
-
                                         {showCurrencyDropdown && (
                                             <ul className="header-currency-dropdown">
                                                 {[
